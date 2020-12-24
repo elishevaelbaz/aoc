@@ -1,16 +1,14 @@
+// assuming all elements are non-negative numbers
 function findContigiuousSet(numsArr, target){
-  let first = 0; //= 0;
-  let last; //= 1;
+  let first = 0; 
   let sum = 0;
   for (let i = 0; i < numsArr.length; i++){
-
     while (sum > target){
       sum -= numsArr[first];
       first += 1;
     }
     if (sum === target){
-      last = i
-      let subArr = numsArr.slice(first, last + 1);
+      let subArr = numsArr.slice(first, i + 1);
       return Math.min(...subArr) + Math.max(...subArr)
     }
     else{
