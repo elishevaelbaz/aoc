@@ -1,5 +1,5 @@
 // assuming all elements are non-negative numbers
-function findContigiuousSet(numsArr, target){
+function findContiguousSet(numsArr, target){
   let first = 0; 
   let sum = 0;
   for (let i = 0; i < numsArr.length; i++){
@@ -18,7 +18,7 @@ function findContigiuousSet(numsArr, target){
 }
 
 // brute force
-function findContigiuousSetBruteForce(numsArr, target){
+function findContiguousSetBruteForce(numsArr, target){
   for (let i = 0; i < numsArr.length; i++) {
     let sum = numsArr[i];
     for (let j = i + 1; j < numsArr.length && sum < target; j++) {
